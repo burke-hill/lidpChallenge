@@ -1,16 +1,9 @@
 package com.lidp.fare.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
 import java.time.Instant;
 
-@Entity
-@Table(name = "fares")
 public class Fare
 {
-   @Id
    private Instant departureTime;
    private double distanceMi;
    private int seatRow;
