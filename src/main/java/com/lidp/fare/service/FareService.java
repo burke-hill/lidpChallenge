@@ -8,11 +8,15 @@ import java.util.logging.Logger;
 import com.lidp.fare.dao.FareRepository;
 import com.lidp.fare.domain.Fare;
 import com.lidp.fare.domain.FareId;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class FareService
 {
    private static final Logger logger = Logger.getLogger(FareService.class.getName());
 
+   @Autowired
    private final FareRepository fareRepository;
 
    public FareService(FareRepository fareRepository)
@@ -90,5 +94,9 @@ public class FareService
          // economy base rate
          return 50;
       }
+   }
+
+   public String test() {
+      return "Hello";
    }
 }
