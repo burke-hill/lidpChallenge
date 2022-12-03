@@ -24,4 +24,11 @@ public class FareController {
     public @ResponseBody String testFunction() throws IOException {
         return fareService.test();
     }
+
+    @GetMapping(path = "/allfares")
+    public @ResponseBody Iterable<Fare> getAllFares() throws IOException {
+        return fareService.getFares();
+    }
+
+
 }
