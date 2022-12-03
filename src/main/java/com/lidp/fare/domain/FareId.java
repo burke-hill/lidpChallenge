@@ -10,6 +10,7 @@ import java.util.Objects;
 
 public class FareId implements Serializable
 {
+
    private Instant departureTime;
    private double distanceMi;
    private int seatRow;

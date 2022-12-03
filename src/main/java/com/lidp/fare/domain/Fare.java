@@ -1,8 +1,6 @@
 package com.lidp.fare.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.Instant;
 
@@ -55,6 +53,7 @@ public class Fare
    {
       this.cost = cost;
    }
+
 
    @Override
    public String toString()
