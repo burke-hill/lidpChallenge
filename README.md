@@ -49,4 +49,16 @@ When deploying a spec, Kubernetes must pull the application image from a contain
 If you encounter any difficulties with project setup, please email matthew.segreti@lidp.com for support!
 
 ## Expanded ReadMe Section
-1) Build Gradle project and produce fat jar
+### Docker Configuration
+1) Build Gradle project to produce fat jar (located in [project]/build/libs/[your docker file])
+2) Create Dockerfile in project root
+3) In project root create two Docker Containers (one for project, one for MySQL database)
+  - For spring boot application container
+  ```docker build -t chuckbuckney/fare_app .```
+  then ```docker run -p 8080:8080 chuckbuckney/fare_app```
+  - For MySQL container
+  ```docker pull mysql:8.0.28```
+  then
+  ```docker run --name mysqldb --network springboot-mysql-net -e MYSQL_ROOT_PASSWORD=rootWIN123! -e MYSQL_DATABASE=faresdb -e MYSQL_USER=root -e MYSQL_PASSWORD=rootWIN123! -d mysql:8.0.28```
+4) Create nework between them
+  ```docker network create springboot-mysql-net```
