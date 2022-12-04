@@ -10,9 +10,10 @@ import org.springframework.stereotype.Repository;
 
 // crud repository for storing and querying fares
 @Repository
-public interface FareRepository extends CrudRepository<Fare, Instant>
+public interface FareRepository extends CrudRepository<Fare, Fare>
 {
    Iterable<Fare> findAll();
-   Optional<Fare> findById(Instant time);
+   // finds by time distance and row instead of ID, not sure why
+   Optional<Fare> findByDepartureTimeAndDistanceMiAndSeatRow(Instant time, Double distance, int row);
    Fare save(Fare fare);
 }

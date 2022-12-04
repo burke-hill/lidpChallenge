@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: fareapplication
+  name: fareapplication
+spec:
+  ports:
+  - name: 32500-32500
+    port: 32500
+    protocol: TCP
+    targetPort: 32500
+  selector:
+    app: fareapplication
+  type: ClusterIP
+status:
+  loadBalancer: {}

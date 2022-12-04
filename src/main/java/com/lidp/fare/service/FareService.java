@@ -34,7 +34,8 @@ public class FareService
       // check if fare has already been calculated
       FareId id = new FareId(departureTime, distanceMi, seatRow);
 
-      Optional<Fare> result = fareRepository.findById(id.getDepartureTime());
+      // modified to seat by date miles and seatrow
+      Optional<Fare> result = fareRepository.findByDepartureTimeAndDistanceMiAndSeatRow(id.getDepartureTime(), id.getDistanceMi(), id.getSeatRow());
 
       if (result.isPresent())
       {
