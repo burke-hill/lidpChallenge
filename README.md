@@ -57,6 +57,7 @@ If you encounter any difficulties with project setup, please email matthew.segre
   ```docker build -t chuckbuckney/fare_app .```
   - For MySQL container
   ```docker pull mysql:8.0.28```
-  ```docker run --name mysqldb --network springboot-mysql-net -e MYSQL_ROOT_PASSWORD=rootWIN123! -e MYSQL_DATABASE=faresdb -e MYSQL_USER=root -e``` MYSQL_PASSWORD=rootWIN123! -d mysql:8.0.28
+  then
+  ```docker run --name mysqldb --network springboot-mysql-net -e MYSQL_ROOT_PASSWORD=rootWIN123! -e MYSQL_DATABASE=faresdb -e MYSQL_USER=root -e MYSQL_PASSWORD=rootWIN123! -d mysql:8.0.28```
 4) Create nework between them
   ```docker network create springboot-mysql-net```
