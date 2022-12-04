@@ -55,6 +55,7 @@ If you encounter any difficulties with project setup, please email matthew.segre
 3) In project root create two Docker Containers (one for project, one for MySQL database)
   - For spring boot application container
   ```docker build -t chuckbuckney/fare_app .```
+  then ```docker run -p 8080:8080 chuckbuckney/fare_app```
   - For MySQL container
   ```docker pull mysql:8.0.28```
   then
