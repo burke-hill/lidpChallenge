@@ -49,4 +49,8 @@ When deploying a spec, Kubernetes must pull the application image from a contain
 If you encounter any difficulties with project setup, please email matthew.segreti@lidp.com for support!
 
 ## Expanded ReadMe Section
-1) Build Gradle project and produce fat jar
+### Docker Configuration
+1) Build Gradle project to produce fat jar (located in [project]/build/libs/[your docker file])
+2) Create Dockerfile in project root
+3) Create two Docker Containers (one for project, one for MySQL database)
+4) Create nework between them
