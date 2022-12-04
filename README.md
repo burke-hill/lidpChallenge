@@ -47,3 +47,5 @@ When deploying a spec, Kubernetes must pull the application image from a contain
 ## Questions?
 
 If you encounter any difficulties with project setup, please email matthew.segreti@lidp.com for support!
+
+## Extended ReadMe Section
